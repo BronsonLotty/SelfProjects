@@ -69,8 +69,6 @@ def ShortestPath_Dijkstra(route):
                 route[0][j] = route[0][k]+route[k][j]
                 parent[j] = k
     result = []
-    for i in range(citys-1,-1,-1):
-        
 
     return parent
 ShortestPath_Dijkstra(routelist)
