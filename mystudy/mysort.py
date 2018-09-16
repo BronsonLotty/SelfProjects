@@ -6,11 +6,11 @@ Created on Wed Jun 13 07:51:39 2018
 @author: xutingxi
 """
 
-周三下午/晚上：树和图的遍历，插入删除
-周四：数据库/查找
-周五+周末：深度学习：自然语音处理/推荐算法/图像处理
-18，19，20:深度学习/机器学习
-21:30:论文写作
+# 周三下午/晚上：树和图的遍历，插入删除
+# 周四：数据库/查找
+# 周五+周末：深度学习：自然语音处理/推荐算法/图像处理
+# 18，19，20:深度学习/机器学习
+# 21:30:论文写作
 
 
 
@@ -60,6 +60,20 @@ def sort2(l):
 sort2(a)
 
 
+#另一种冒泡排序
+
+def BubbleSort(L):
+    for i in range(len(L)):
+        for j in range(len(L)-1,i,-1):
+            if L[j] < L[j-1]:
+                temp = L[j]
+                L[j] = L[j-1]
+                L[j-1] = temp
+    return L
+
+
+
+
 #冒泡排序-升级版
 def sort3(l):
     flag=True
@@ -70,6 +84,8 @@ def sort3(l):
                 if l[j]>l[j+1]:
                     l=swap(l,j,j+1)
                     flag=True
+        else:
+            break
     return l
 
 sort3(a)
@@ -96,6 +112,18 @@ a=[2,4,7,2,1,3,0,9,5]
 
 sort4(a)
 
+def SelectSort(L):
+    for i in range(len(L)-1):
+        minValue = L[i]
+        minIndex = i
+        for j in range(i+1,len(L)):
+            if L[j] < minValue:
+                minValue = L[j]
+                minIndex = j
+        if i != minIndex:
+            L = swap(L, i, minIndex)
+    return L
+
 
 #直接插入排序
 '''
@@ -114,6 +142,24 @@ def sort5(l):
             l[j+1]=temp
     return l
 sort5(a)
+
+
+def InsertSort(L):
+    for i in range(1,len(L)):
+        if L[i] < L[i-1]:
+            temp = L[i]
+            n = i-1
+            while n >= 0:
+                if L[n] > temp:
+                    L[n+1] = L[n]
+                    n-=1
+                else:
+                    break
+            L[n+1] = temp
+    return L
+
+
+
 
 
 #希尔排序
@@ -138,6 +184,27 @@ def sort6(l):
 
 
 sort6(a)
+
+
+
+def ShellSort(L):
+    increment = len(L)
+    while increment > 1:
+        increment = increment//3 + 1
+        for i in range(1+increment,len(L)):
+            if L[i] < L[i-increment]:
+                temp = L[i]
+                n = i - increment
+                while n >= 0:
+                    if temp < L[n]:
+                        L[n+increment] = L[n]
+                        n -= increment
+                    else:
+                         break
+                L[n+increment] = temp
+    return L
+
+
 
 #堆排序
 
@@ -166,7 +233,7 @@ test=l=[50,10,90,30,70,40,80,60,20]
 HeapList(test,4)
 
 #构建堆排序函数
-def HeapSort(l):
+def OldHeapSort(l):
     start=[0]
     start.extend(l)
     l=start
@@ -190,9 +257,71 @@ def HeapSort(l):
 
 test=l=[50,10,90,30,70,40,80,60,12,23,56,75,122,20]
 
+OldHeapSort(test)
+
+
+
+#大顶堆
+def HeapAdjust(L,s,m):
+    temp = L[s]
+    j = 2 * s
+    while j <= m:
+        if j != m:  #考虑m为偶数，且j=m的时候，最后一个节点会没有右子节点
+            if L[j] < L[j+1]:
+                j += 1
+        if temp >= L[j]:
+            break
+        L[s] = L[j]
+        s = j
+        j = j*2
+    L[s] = temp
+    return L
+
+def HeapSort(L):
+    length = len(L)
+    L.insert(0,0)
+    for i in range(length//2,0,-1):
+        L = HeapAdjust(L,i,length)
+    print(L)
+    for i in range(length,1,-1):
+        print(L)
+        L = swap(L,1,i)
+        print(L)
+        L = HeapAdjust(L, 1, i-1)
+    return L[1:]
+
+test=l=[30,10,20,40]
 HeapSort(test)
 
 
+#小顶堆
+def NewHeapAdjust(L, s, m):
+    temp = L[s]
+    j = 2 * s
+    while j <= m:
+        if j != m:
+            if L[j] > L[j + 1]:
+                j += 1
+        if temp < L[j]:
+            break
+        L[s] = L[j]
+        s = j
+        j = j * 2
+    L[s] = temp
+    return L
+
+def NewHeapSort(L):
+    length = len(L)
+    L.insert(0, 0)
+    for i in range(length // 2, 0, -1):
+        L = NewHeapAdjust(L, i, length)
+    for i in range(length, 1, -1):
+        L = swap(L, 1, i)
+        L = NewHeapAdjust(L, 1, i - 1) #注意下界
+    return L[1:]
+
+L = [12, 45, 63, 2, 4, 3, 87, 3]
+NewHeapSort(L)
 
 
 
@@ -297,7 +426,5 @@ quicksort(l)
     
         
 searchMatrix( matrix, 5)        
-
-
 
 
