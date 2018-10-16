@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6df614a7-b4f9-4bce-aa2f-4209aab123f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mystudy/sort201810.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/ allnew.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/RF.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/data.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/data.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/new.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/newdata.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/sanyuanzu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/tencent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/mystudy/tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystudy/zifuchuan.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,11 +30,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="1" />
+          <entry key="md" value="1" />
           <entry key="py" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Python" value="45" />
         </counts>
@@ -70,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mystudy/sort201810.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
+            <state relative-caret-position="198">
+              <caret line="112" column="12" lean-forward="true" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
               <folding>
                 <marker date="1539685482792" expanded="true" signature="55:60" ph="..." />
                 <marker date="1539685482792" expanded="true" signature="118:239" ph="..." />
@@ -499,10 +488,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mystudy/sort201810.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
+        <state relative-caret-position="198">
+          <caret line="112" column="12" lean-forward="true" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
           <folding>
             <marker date="1539685482792" expanded="true" signature="55:60" ph="..." />
             <marker date="1539685482792" expanded="true" signature="118:239" ph="..." />
