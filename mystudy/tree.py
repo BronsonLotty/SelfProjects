@@ -66,7 +66,7 @@ class Solution():
             #res.append(result[res[i-1]].val)
             if result[res[i-1]].left!=None:
                 res.append(result[res[i-1]].left)
-            if result[res[i-1]].right!=None:    
+            if result[es[i-1]].right!=None:
                 res.append(result[res[i-1]].right)
         return res
     
